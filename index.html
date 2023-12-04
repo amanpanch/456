@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home App | theuicode.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="h-screen flex justify-center items-center">
+
+   
+
+   
+    <div id="elementToWorkOn">
+        <div class="circle" >  Cold mode<br>!!! activated !!! 
+            <span class="num">18°</span>
+          
+        </div>  
+        <p>
+            <button onclick="totalclick(1)">+</button>
+            <span id="totalclicks">0</span>
+            <button onclick="totalclick(-1)">-</button>
+        </p> 
+        <button onclick="totalclick(0)">RESET</button>
+      
+    </div>
+    <div id="elementToWorkOn1">
+        <div class="circle" >Fan mode<br>!!! activated !!! 
+            <span class="num">18°</span>
+          
+        </div>  
+        <p>
+            <button onclick="totalclick(1)">+</button>
+            <span id="totalclicks">0</span>
+            <button onclick="totalclick(-1)">-</button>
+        </p> 
+        <button onclick="totalclick(0)">RESET</button>
+      
+    </div>
+    <div id="elementToWorkOn2">
+        <div class="circle" >  Dry mode<br>!!! activated !!! 
+            <span class="num">18°</span>
+          
+        </div>  
+        <p>
+            <button onclick="totalclick(1)">+</button>
+            <span id="totalclicks">0</span>
+            <button onclick="totalclick(-1)">-</button>
+        </p> 
+        <button onclick="totalclick(0)">RESET</button>
+      
+    </div>
+
+   
+    <!-- <p class="inc"><span class="plus">+</span><span class="minus">-</span></p> -->
+
+    
+    <div class="container overflow-hidden">
+        <div class="flex flex-row justify-center pt-14">
+            <div class="circle-track rounded-full">
+                <div class="circle-progress rounded-full flex justify-center items-center">
+                    <div class="circle-inner bg-white rounded-full flex justify-center items-center">
+                        <div class="pointer app-bg-color-black h-1 w-1 rounded-full"></div>
+                        <span class="absolute text-5xl font-light app-color-black">18°</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between px-12">
+            <span class="text-2xl font-light app-color-blue">15°</span>
+            <span class="text-2xl font-light app-color-red">30°</span>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <span class="app-color-purple">°</span>
+            <span class="app-font-sm tracking-widest app-color-purple -mt-2">AUTO</span>
+        </div>
+        <div class="flex flex-row px-6 mt-4 justify-between">
+            
+           
+            <div class="flex box flex-col h-36 w-20 items-center justify-between py-4 rounded-2xl   app-shadow app-bg-color-black hover:scale-125 " onclick="showOrHide()">
+                <i class="fa-regular fa-snowflake text-3xl app-color-purple"></i>
+                <span class="app-font-md font-semibold app-color-purple tracking-widest" >COLD</span>
+            </div>  
+            <div class="flex box flex-col h-36 w-20 items-center justify-between py-4 rounded-2xl app-shadow app-bg-color-black hover:scale-125" onclick="showOrHide1()">
+                <i class="fa-solid fa-fan text-3xl app-color-purple"></i>
+                <span class="app-font-md font-semibold app-color-purple tracking-widest">FAN</span>
+            </div>
+            <div class="flex box flex-col h-36 w-20 items-center justify-between py-4 rounded-2xl app-shadow app-bg-color-black hover:scale-125" onclick="showOrHide2()">
+                <i class="fa-solid fa-bacon text-3xl app-color-purple"></i>
+                <span class="app-font-md font-semibold app-color-purple tracking-widest">DRY</span>
+            </div>
+        </div>
+        <div class="text-center mt-6 app-font-md font-semibold app-color-black tracking-widest ">CONDITIONER</div>
+        <div class="flex justify-center mt-2">
+            <div class="w-px h-3 bg-gray-400"></div>
+        </div>
+        <div class="flex justify-between px-6 mt-6">
+            <i class="fa-regular fa-clone app-color-black"></i>
+            <i class="fa-solid fa-repeat app-color-black"></i>
+        </div>
+        <div class="flex justify-center relative">
+            <div class="w-48 h-48 bg-red-500 transform rotate-45 power-bg"></div>
+            <i class="fa-solid fa-power-off absolute text-3xl app-color-black hover:scale-125"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- flex flex-col bg-white h-36 w-20 items-center justify-between py-4 rounded-2xl app-shadow -->
+</body>
+
+</html>
